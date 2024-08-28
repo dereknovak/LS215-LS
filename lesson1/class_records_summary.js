@@ -42,13 +42,15 @@ ALGORITHM
 ** getLetterGrade
 - Use if statements to lookup grade
 */
+const EXAM_GRADING_SCALE = 0.65;
+const EXERCISE_GRADING_SCALE = 0.35;
 
 function generateClassRecordSummary(scores) {
   const studentGrades = [];
   const exams = [];
 
   Object.keys(scores).forEach(student => {
-    let examsGrade = scores[student].scores.exams.reduce((total, score, idx) => {
+    let examGrade = scores[student].scores.exams.reduce((total, score, idx) => {
       if (exams[idx]) {
         exams[idx].push(score);
       } else {
@@ -58,11 +60,11 @@ function generateClassRecordSummary(scores) {
       return total + score;
     }, 0) / scores[student].scores.exams.length;
 
-    let exercisesGrade = scores[student].scores.exercises.reduce((total, score) => {
+    let exerciseGrade = scores[student].scores.exercises.reduce((total, score) => {
       return total + score;
     });
 
-    let totalGrade = Math.round((examsGrade * 0.65) + (exercisesGrade * 0.35));
+    let totalGrade = calculateScore(examGrade, exerciseGrade);
     studentGrades.push(formattedGrade(totalGrade));
   });
 
@@ -84,6 +86,13 @@ function generateClassRecordSummary(scores) {
     studentGrades: studentGrades,
     exams: examData,
   };
+}
+
+function calculateScore(examGrade, exerciseGrade) {
+  examGrade *= EXAM_GRADING_SCALE;
+  exerciseGrade *= EXERCISE_GRADING_SCALE;
+
+  return Math.round(examGrade + exerciseGrade);
 }
 
 function formattedGrade(score) {
