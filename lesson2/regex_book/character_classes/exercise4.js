@@ -1,0 +1,1 @@
+let regex = /[a-wyz]/i;

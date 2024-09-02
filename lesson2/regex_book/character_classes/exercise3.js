@@ -1,0 +1,1 @@
+let regex = /[0-9a-j]/i;

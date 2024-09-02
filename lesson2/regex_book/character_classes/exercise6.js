@@ -1,0 +1,1 @@
+let regex = /[^a-z \n\r]/i
