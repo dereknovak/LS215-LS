@@ -1,0 +1,1 @@
+let regex = /\b[a-z]*i[a-z]*i[a-z]i*[a-z]*/i;

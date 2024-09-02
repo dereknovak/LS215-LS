@@ -1,0 +1,1 @@
+let regex = /\bhttps?:\/\/\S*/;

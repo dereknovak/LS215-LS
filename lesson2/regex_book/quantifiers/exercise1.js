@@ -1,0 +1,1 @@
+let regex = /\bb[a-z]*e\b/;
