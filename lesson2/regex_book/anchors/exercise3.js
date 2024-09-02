@@ -1,0 +1,1 @@
+let regex = /\b[a-z]{3}\b/i;
