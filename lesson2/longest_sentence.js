@@ -77,8 +77,8 @@ let longText = 'Four score and seven years ago our fathers brought forth' +
   ' the people, for the people, shall not perish from the' +
   ' earth.';
 
-longestSentence("      hello there  \n  buddy. How you?");
-longestSentence(longText);
+longestSentence("Hello   ! Why  not? Goodbye.");
+// longestSentence(longText);
 // longestSentence("    I yam what I yam!")
 
 // console output
