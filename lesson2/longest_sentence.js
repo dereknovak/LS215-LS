@@ -23,23 +23,23 @@ ALGORITHM
 
 */
 
-const SENTENCE_DELIMITER = /[\.!\?] /;
-const WORD_DELIMITER = /[ ,]+/;
+const SENTENCE_REGEX = /\b[^\.\?\!]+[.\?\!]*/g;
+const WORD_REGEX = /[^\s\.?!]+/g;
 
 function longestSentence(text) {
-  let sentences = text.split(SENTENCE_DELIMITER);
-  let longestSentence = sentences.reduce(toLongest, { count: 0 });
+  let sentences = text.match(SENTENCE_REGEX);
+  let mostWords = sentences.reduce(toLongest, { count: 0 });
 
-  console.log(longestSentence.text + '\n');
-  console.log(`The longest sentence has ${longestSentence.count} words.`);
+  console.log(mostWords.text + '\n');
+  console.log(`The longest sentence has ${mostWords.count} words.`);
 }
 
 function toLongest(previousTextObj, currentText) {
-  let words = currentText.trim().split(WORD_DELIMITER);
+  let words = currentText.match(WORD_REGEX);
 
   if (words.length > previousTextObj.count) {
     return {
-      text: currentText.trim(),
+      text: currentText,
       count: words.length,
     };
   } else {
@@ -66,7 +66,7 @@ let longText = 'Four score and seven years ago our fathers brought forth' +
   ' what we say here, but it can never forget what they' +
   ' did here. It is for us the living, rather, to be dedicated' +
   ' here to the unfinished work which they who fought' +
-  ' here have thus far so nobly advanced. It is rather for' +
+  ' here have thus far so nobly advanced.It is rather for' +
   ' us to be here dedicated to the great task remaining' +
   ' before us -- that from these honored dead we take' +
   ' increased devotion to that cause for which they gave' +
@@ -77,8 +77,9 @@ let longText = 'Four score and seven years ago our fathers brought forth' +
   ' the people, for the people, shall not perish from the' +
   ' earth.';
 
+longestSentence("      hello there  \n  buddy. How you?");
 longestSentence(longText);
-longestSentence("    I yam what I yam!")
+// longestSentence("    I yam what I yam!")
 
 // console output
 /*
