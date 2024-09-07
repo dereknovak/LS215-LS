@@ -75,8 +75,8 @@ function compareVersions(version1, version2) {
     let currentv1 = versions[1][i] || 0;
     let currentv2 = versions[2][i] || 0;
 
-    if (currentv1 > currentv2) return 1
-    if (currentv1 < currentv2) return -1
+    if (currentv1 > currentv2) return 1;
+    if (currentv1 < currentv2) return -1;
   }
 
   return 0;
