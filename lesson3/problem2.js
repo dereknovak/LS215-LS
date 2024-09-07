@@ -66,6 +66,8 @@ isEven
 
 function luhnCheck(string) {
   const digits = string.replace(/\D+/g, '').split('').map(Number);
+  if (digits.length === 0) return false;
+  
   const transformedDigits = [];
   let distanceFromRight = 0;
   for (let i = digits.length - 1; i >= 0; i--) {
@@ -96,4 +98,5 @@ console.log(luhnCheck('  87 6 3   ') === true);
 console.log(luhnCheck('42') === true);
 console.log(luhnCheck('232') === true);
 console.log(luhnCheck('1111') === false);
+console.log(luhnCheck('') === false);
 console.log(luhnCheck('1111 2005 7766 3554') === false);
