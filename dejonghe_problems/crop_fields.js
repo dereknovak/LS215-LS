@@ -68,8 +68,8 @@ function cropHydrated(field) {
         if (containsWater(waterableLand(previousRow, col)) ||
             containsWater(waterableLand(nextRow, col)) ||
             containsWater(waterableLand(currentRow, col))) {
-              continue;
-            }
+          continue;
+        }
 
         return false; 
       }
