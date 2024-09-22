@@ -78,19 +78,9 @@ function swap(string) {
 
   return [...string].map(char => {
     if (isLetter(char)) {
-      let number = numbers.shift();
-      if (number) {
-        return number;
-      } else {
-        return char;
-      }
+      return numbers.shift() || char;
     } else if (isNumber(char)) {
-      let letter = letters.shift();
-      if (letter) {
-        return letter;
-      } else {
-        return char;
-      }
+      return letters.shift() || char;
     } else {
       return char;
     }
