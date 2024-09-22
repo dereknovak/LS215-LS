@@ -25,19 +25,9 @@ Questions to ask:
 
 /*
 1. Validate data
-
-2. Clean data
-    - Validate again if necessary
+2. Sanitize data
+    - Sanitize again if necessary
 3. Create proper data structure
-4. Perform operation: Comparison, test, transformation
-5. Return result of test (boolean or null)
-*/
-
-/*
-1. Validate data
-2. Clean data
-3. Create proper data structure
-    - Validate again if necessary
 4. Perform operation: Comparison, test, transformation
 5. Return result of test (boolean or null)
 */
