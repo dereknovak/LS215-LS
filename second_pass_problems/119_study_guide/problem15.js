@@ -26,7 +26,6 @@ EXAMPLE
 [2, 3, 4, 5, 6]
 while i <= length - 4
 
-
 DATA STRUCTURE
 - Use subarrays to capture groups of 4
     - Reduce to the product
@@ -44,7 +43,6 @@ numbers = [2, 3, 4, 5, 6]
 subarrays = [[2, 3, 4, 5],[3, 4, 5, 6]]
 products = [120,360]
 max = 360
-
 
 ALGORITHM
 1. Validate input
