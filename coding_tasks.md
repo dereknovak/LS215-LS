@@ -1,4 +1,4 @@
-## Substrings
+## All Substrings
 
 ```js
 function getSubstrings(string) {
@@ -29,6 +29,34 @@ console.log(substrings);
 */
 ```
 
+- Also works for arrays, just change `string` to `array`.
+
+## Consecutive groups
+
+```js
+function getDoubleSubstrings(word) {
+  const substrings = [];
+  for (let i = 0; i <= word.length - 2; i++) {
+    substrings.push(word.slice(i, i + 2));
+  }
+
+  return substrings
+}
+
+let string = 'launch';
+let substrings = getDoubleSubstrings(string);
+
+console.log(substrings);
+/*
+[ 'la', 'au', 'un', 'nc', 'ch' ]
+*/
+```
+
+- When selecting the length of the grouping, change `word.length -` and `i +` to the respective number.
+    - Groups of 2 => `word.length - 2` / `i + 2`
+    - Groups of 3 => `word.length - 3` / `i + 3`
+- If length is outside the range of the string, an empty array will be returned.
+
 ## Pairs
 
 ```js
@@ -58,6 +86,10 @@ console.log(pairs);
 */
 ```
 
+- For groups of 3 or more, add another `for` loop layer incremented by 1 from previous layer.
+    - `for (let third = second + 1...`
+    - `for (let fourth = third + 1...`
+
 ## Tally
 
 ```js
@@ -76,4 +108,28 @@ let tally = getTally(string);
 console.log(tally);
 // { m: 1, i: 4, s: 4, p: 2 }
 
+```
+
+## Matching Arrays
+
+```js
+function arraysMatch(arr1, arr2) {
+  return JSON.stringify(arr1) === JSON.stringify(arr2);
+}
+
+function arraysMatch2(arr1, arr2) {
+  return arr1.every((_, idx) => arr1[idx] === arr2[idx]);
+}
+
+let arr1 = [1, "apple", null, undefined, 8.8, false];
+let arr2 = [1, "apple", null, undefined, 8.8, false];
+let arr3 = [1, "apple", null, undefined, 8.8, false, [1, 2, 3], { a: 1 }];
+let arr4 = [1, "apple", null, undefined, 8.8, false, [1, 2, 3], {a: 1}];
+
+
+console.log(arraysMatch(arr1, arr2) === true);   // true
+console.log(arraysMatch(arr3, arr4) === true);   // true
+
+console.log(arraysMatch2(arr1, arr2) === true);  // true
+console.log(arraysMatch2(arr3, arr4) === true);  // false (cannot compare objects)
 ```
