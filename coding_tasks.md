@@ -133,3 +133,27 @@ console.log(arraysMatch(arr3, arr4) === true);   // true
 console.log(arraysMatch2(arr1, arr2) === true);  // true
 console.log(arraysMatch2(arr3, arr4) === true);  // false (cannot compare objects)
 ```
+
+## Copy Array
+
+```js
+let array = ['a', 'b', 'c'];
+let newArray = array.slice();
+
+console.log(array);               // ['a', 'b', 'c']
+console.log(newArray);            // ['a', 'b', 'c']
+
+console.log(array === newArray);  // false
+```
+
+## Copy Object
+
+```js
+let obj = {start: 1, end: 5};
+let newObj = Object.fromEntries(Object.entries(obj));
+
+console.log(obj);             // { start: 1, end: 5 }
+console.log(newObj);          // { start: 1, end: 5 }
+
+console.log(obj === newObj);  // false
+```
