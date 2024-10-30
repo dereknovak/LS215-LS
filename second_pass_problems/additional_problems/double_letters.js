@@ -1,4 +1,4 @@
-// Create a function that determines how many characters from a string contain double-letters.
+// Create a function that determines how many words from a string contain double-letters.
 
 /* 
 
@@ -147,10 +147,13 @@ const isDoubleLetter = string => string[0] === string[1];
 // TEST CASES
 
 console.log(doubleLetterCount('Books are a good source of stuff') === 3);
+
 console.log(doubleLetterCount('BoOks are a good source of stuff') === 3);
 console.log(doubleLetterCount('Little toy spaceship') === 1);
 console.log(doubleLetterCount('Litt"#le   t99oy spa@@ceship glasS.') === 2);
+console.log(doubleLetterCount('sassy glassdoor') === 2);
 console.log(doubleLetterCount('@@$ 442') === 0);
 console.log(doubleLetterCount('a b') === 0);
-
+console.log(doubleLetterCount('aa') === 1);
+console.log(doubleLetterCount('aaaaaaaa') === 1);
 console.log(doubleLetterCount('') === 0);
