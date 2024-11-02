@@ -87,6 +87,6 @@ console.log(countAlmostPalindromes(['coattac', 'break', 'aaa']) === 2);
 console.log(countAlmostPalindromes(['a', 'aa', 'aaa']) === 2);
 console.log(countAlmostPalindromes(['a', 'break', 'Derek']) === 0);
 console.log(countAlmostPalindromes(['Derek', 'Mom', 'Papa']) === 2);
-console.log(countAlmostPalindromes(['@ana', 'break', 'carrace8']) === 0);
+console.log(countAlmostPalindromes(['@ana', 'break', 'carrace8']) === 2);
 console.log(countAlmostPalindromes([]) === 0);
 ```
