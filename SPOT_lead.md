@@ -79,9 +79,9 @@ console.log(match(anagramGroup(["123", "231", "312", "ab@", "@ab", "ba@"]), [["1
 ```
 
 ```js
-// Create a function that returns the count of almost palindromes from a list of words.
+// Create a function that returns the count of almost palindromes from a list of words. An almost palidrome is a word whose letters can be rearranged to form a palindrome.
 
-console.log(countAlmostPalindromes(['ana', 'break', 'carrace']) === 2);
+console.log(countAlmostPalindromes(['ana', 'break', 'raecacr']) === 2);
 
 console.log(countAlmostPalindromes(['coattac', 'break', 'aaa']) === 2);
 console.log(countAlmostPalindromes(['a', 'aa', 'aaa']) === 2);
