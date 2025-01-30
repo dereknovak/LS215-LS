@@ -27,6 +27,7 @@ function hasSameElements(subarr, testArray) {
 console.log(sameElements([[1, 2, 3], [2, 3, 4], [3, 1, 2]], [1, 2, 3]) === 2);
 
 console.log(sameElements([[1, 2, 3], [2, 3, 4], [3, 1, 2]], [1, 1, 2, 3]) === 0);
+console.log(sameElements([[1, 2], [1, 1, 2], [1, 2, 2]], [1, 1, 2]) === 1);
 console.log(sameElements([[1, 2, 3, 1], [2, 3, 4], [3, 1, 2]], [1, 2, 3]) === 2);
 console.log(sameElements([['1', 2, 3], [2, 3, 4], [3, 1, 2]], [1, 2, 3]) === 1);
 console.log(sameElements([[null, false, true], ['string', true, true], [false, 29, null]], [null, false]) === 2);

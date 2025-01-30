@@ -39,11 +39,12 @@ console.log(doubleLetterCount('') === 0);
 ## Arrays
 
 ```js
-// Create a function that counts the amount of subarrays in a 2D array that contain the elements within a given array.
+// Create a function that counts the number of subarrays in a 2D array that contain the elements within a given array.
 
 console.log(sameElements([[1, 2, 3], [2, 3, 4], [3, 1, 2]], [1, 2, 3]) === 2);
 
 console.log(sameElements([[1, 2, 3], [2, 3, 4], [3, 1, 2]], [1, 1, 2, 3]) === 0);
+console.log(sameElements([[1, 2], [1, 1, 2], [1, 2, 2]], [1, 1, 2]) === 1);
 console.log(sameElements([[1, 2, 3, 1], [2, 3, 4], [3, 1, 2]], [1, 2, 3]) === 2);
 console.log(sameElements([['1', 2, 3], [2, 3, 4], [3, 1, 2]], [1, 2, 3]) === 1);
 console.log(sameElements([[null, false, true], ['string', true, true], [false, 29, null]], [null, false]) === 2);
@@ -90,3 +91,13 @@ console.log(countAlmostPalindromes(['Derek', 'Mom', 'Papa']) === 2);
 console.log(countAlmostPalindromes(['@ana', 'break', 'carrace8']) === 2);
 console.log(countAlmostPalindromes([]) === 0);
 ```
+```js
+
+console.log(sameElements([[1, 2, 3], [2, 3, 4], [3, 1, 2]], [1, 1, 2, 3]) === 0);
+console.log(sameElements([[1, 2], [1, 1, 2], [1, 2, 2]], [1, 1, 2]) === 1);
+console.log(sameElements([[1, 2, 3, 1], [2, 3, 4], [3, 1, 2]], [1, 2, 3]) === 2);
+console.log(sameElements([['1', 2, 3], [2, 3, 4], [3, 1, 2]], [1, 2, 3]) === 1);
+console.log(sameElements([[null, false, true], ['string', true, true], [false, 29, null]], [null, false]) === 2);
+console.log(sameElements([[1, 2, 3], [2, 3, 4], [3, 1, 2]], []) === 3);
+console.log(sameElements([[]], [1, 2, 3]) === 0);
+console.log(sameElements([], [1, 2, 3]) === null);
